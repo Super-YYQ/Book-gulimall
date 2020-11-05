@@ -1,9 +1,9 @@
 <!-- 封面 --> 
 
-> 一个神奇的文档网站生成器。 
+> 都闪开，让我来！！
 
-- 简单、轻便 (压缩后 ~21kB) 
-- 无需生成 html 文件 
-- 众多主题 
+- [搭建教程--点击跳转](https://docsify.js.org/#/zh-cn/quickstart)
 
-- [GitHub](https://github.com/docsifyjs/docsify/)
+[GitHub](https://github.com/Super-YYQ/MyBook)
+[Get Started](README.md)
+
