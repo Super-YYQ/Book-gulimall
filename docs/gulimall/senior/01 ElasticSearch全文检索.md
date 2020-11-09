@@ -1,4 +1,6 @@
-## 一、 ELASTICSEARCH
+> 参考链接  https://blog.csdn.net/hancoder/article/details/107612746
+
+## 一、 ELASTICSEARCH基础
 
 ### 1、安装elastic search
 
@@ -290,7 +292,7 @@ DELETE customer
 
 删除前，所有的索引
 
-```
+```shell
 green  open .kibana_task_manager_1   KWLtjcKRRuaV9so_v15WYg 1 0 2 0 39.8kb 39.8kb
 green  open .apm-agent-configuration cuwCpJ5ER0OYsSgAJ7bVYA 1 0 0 0   283b   283b
 green  open .kibana_1                PqK_LdUYRpWMy4fK0tMSPw 1 0 7 0 31.2kb 31.2kb
@@ -303,11 +305,10 @@ yellow open customer                 nzDYCdnvQjSsapJrAIT8Zw 1 1 4 0  4.4kb  4.4k
 
 删除后，所有的索引
 
-```
+```shell
 green  open .kibana_task_manager_1   KWLtjcKRRuaV9so_v15WYg 1 0 2 0 39.8kb 39.8kb
 green  open .apm-agent-configuration cuwCpJ5ER0OYsSgAJ7bVYA 1 0 0 0   283b   283b
 green  open .kibana_1                PqK_LdUYRpWMy4fK0tMSPw 1 0 7 0 31.2kb 31.2kb
-123
 ```
 
 #### 2.6 eleasticsearch的批量操作——bulk
@@ -819,7 +820,6 @@ QUERY_NAME:{
       }   
    }
 }
-12345678
 GET bank/_search
 {
   "query": {
@@ -1669,7 +1669,6 @@ GET bank/_search
     }
   }
 }
-123456789101112131415161718192021222324252627282930313233
 ```
 
 查询结果：
@@ -1751,8 +1750,6 @@ GET bank/_search
     ]
   }
 }
-
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677
 ```
 
 能够看到相关度越高，得分也越高。
@@ -1829,8 +1826,6 @@ GET bank/_search
     ]
   }
 }
-
-123456789101112131415161718192021222324252627282930313233343536373839
 ```
 
 Each `must`, `should`, and `must_not` element in a Boolean query is referred to as a query clause. How well a document meets the criteria in each `must` or `should` clause contributes to the document’s *relevance score*. The higher the score, the better the document matches your search criteria. By default, Elasticsearch returns documents ranked by these relevance scores.
@@ -1866,7 +1861,6 @@ GET bank/_search
     }
   }
 }
-12345678910111213141516171819202122
 ```
 
 查询结果：
@@ -2081,8 +2075,6 @@ GET bank/_search
     ]
   }
 }
-
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188189190191192193194195196197198199200201202203204205206207208209210
 ```
 
 **能看到所有文档的 “_score” : 0.0。**
@@ -2245,8 +2237,6 @@ GET bank/_search
     }
   }
 }
-
-123456789101112131415161718192021222324252627282930313233343536373839404142434445
 ```
 
 复杂：
@@ -2275,7 +2265,6 @@ GET bank/_search
   },
   "size": 0
 }
-12345678910111213141516171819202122
 ```
 
 输出结果：
@@ -2454,7 +2443,6 @@ GET bank/_search
     }
   }
 }
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173
 ```
 
 查出所有年龄分布，并且这些年龄段中M的平均薪资和F的平均薪资以及这个年龄段的总体平均薪资
@@ -2494,7 +2482,6 @@ GET bank/_search
   },
   "size": 0
 }
-12345678910111213141516171819202122232425262728293031323334
 ```
 
 输出结果：
@@ -2977,7 +2964,6 @@ POST _reindex
   "throttled_until_millis" : 0,
   "failures" : [ ]
 }
-1234567891011121314151617181920
 ```
 
 查看newbank中的数据
@@ -3097,7 +3083,7 @@ POST _analyze
 所有的语言分词，默认使用的都是“Standard Analyzer”，但是这些分词器针对于中文的分词，并不友好。为此需要安装中文的分词器。
 
 注意：不能用默认elasticsearch-plugin install xxx.zip 进行自动安装
-https://github.com/medcl/elasticsearch-analysis-ik/releases/download 对应es版本安装
+https://github.com/medcl/elasticsearch-analysis-ik 对应es版本安装
 
 在前面安装的elasticsearch时，我们已经将elasticsearch容器的“/usr/share/elasticsearch/plugins”目录，映射到宿主机的“ /mydata/elasticsearch/plugins”目录下，所以比较方便的做法就是下载“/elasticsearch-analysis-ik-7.6.2.zip”文件，然后解压到该文件夹下即可。安装完毕后，需要重启elasticsearch容器。
 
@@ -3508,9 +3494,9 @@ GET my_index/_analyze
 
 ## 二、SpringBoot整合ElasticSearch
 
-### 1、SpringBoot整合ElasticSearch
+> 官网文档 https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.9/java-rest-high-getting-started-maven.html
 
-#### 1.1 导入依赖
+### 1、导入依赖
 
 这里的版本要和所按照的ELK版本匹配。
 
@@ -3539,9 +3525,21 @@ GET my_index/_analyze
     </properties>
 ```
 
-#### 2.2 编写测试类
+### 2、 编写测试类
 
-##### （1）测试保存数据
+```java
+// 初始化
+RestHighLevelClient client = new RestHighLevelClient(
+                RestClient.builder(
+                        new HttpHost("localhost", 9200, "http")));
+
+// 使用完之后应正确关闭
+client.close();
+```
+
+
+
+#### （1）测试保存数据
 
 https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/java-rest-high-document-index.html
 
@@ -3573,7 +3571,7 @@ https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/java-rest
 
 ![image-20200511112025327](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9mZXJtaGFuLm9zcy1jbi1xaW5nZGFvLmFsaXl1bmNzLmNvbS9ndWxpL2ltYWdlLTIwMjAwNTExMTEyMDI1MzI3LnBuZw?x-oss-process=image/format,png)
 
-##### （2）测试获取数据
+#### （2）测试获取数据
 
 https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/java-rest-high-search.html
 
@@ -3733,6 +3731,8 @@ public void searchData() throws IOException {
 
 可以尝试对比打印的条件和执行结果，和前面的ElasticSearch的检索语句和检索结果进行比较；
 
+
+
 ## 其他
 
 ### 1.、kibana控制台命令
@@ -3759,7 +3759,7 @@ ONBOOT=yes
 IPADDR=192.168.56.10
 NETMASK=255.255.255.0
 GATEWAY=192.168.56.1  // 添加网关
-DNSl=114.114.114.11  // 添加
+DNSl=114.114.114.114  // 添加
 DNS2=8.8.8.8 // 添加
 PEERDNS=no
 #VAGRANT-END
