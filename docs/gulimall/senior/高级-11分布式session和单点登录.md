@@ -80,6 +80,8 @@ $ mvn install
 
 ## 四、附录
 
+### 4.1 session获取
+
 ```java
 // 获取session和cookie的方法
 public void test (HttpSession httpSession, @CookieValue(value = "sso_token",required = false) String sso_token){}
