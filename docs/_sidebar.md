@@ -3,15 +3,18 @@
 - [文档说明](gulimall/)
 
 - [分布式-基础](gulimall/base/基础-01项目环境（虚拟机、docker、idea）.md)
-- [基础-01项目环境（虚拟机、docker、idea）](gulimall/base/基础-01项目环境（虚拟机、docker、idea）.md)
-    
-- [基础-02快速开发（人人开源）](gulimall/base/基础-02快速开发（人人开源）.md)
+
+    - [基础-01项目环境（虚拟机、docker、idea）](gulimall/base/基础-01项目环境（虚拟机、docker、idea）.md)
+
+    - [基础-02快速开发（人人开源）](gulimall/base/基础-02快速开发（人人开源）.md)
+
     - [基础-03分布式组件（Nacos、Feign、gateway）](gulimall/base/基础-03分布式组件（Nacos、Feign、gateway）.md)
     - [基础-04 前端ES6基础](gulimall/base/基础-04前端ES6基础.md)
     - [基础-05 善品服务](gulimall/base/基础-05商品服务.md)
-    
 - [分布式-高级](gulimall/senior/高级-01ElasticSearch.md)
-- [高级-01ElaticSearch](gulimall/senior/高级-01ElasticSearch.md)
+
+    - [高级-01ElaticSearch](gulimall/senior/高级-01ElasticSearch.md)
+
     - [高级-02商品上架](gulimall/senior/高级-02商品上架.md)
     - [高级-03工具整合（thymeleaf、devtools、nginx）](gulimall/senior/高级-03工具整合（thymeleaf、devtools、nginx）.md)
     - [高级-04JMter压测与JVM分析](gulimall/senior/高级-04JMter压测与JVM分析.md)
