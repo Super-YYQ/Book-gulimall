@@ -14,8 +14,7 @@
 - [分布式-高级](gulimall/senior/高级-01ElasticSearch.md)
 
     - [高级-01ElaticSearch](gulimall/senior/高级-01ElasticSearch.md)
-
-    - [高级-02商品上架](gulimall/senior/高级-02商品上架.md)
+- [高级-02商品上架](gulimall/senior/高级-02商品上架.md)
     - [高级-03工具整合（thymeleaf、devtools、nginx）](gulimall/senior/高级-03工具整合（thymeleaf、devtools、nginx）.md)
     - [高级-04JMter压测与JVM分析](gulimall/senior/高级-04JMter压测与JVM分析.md)
     - [高级-05缓存与分布式锁](gulimall/senior/高级-05缓存与分布式锁.md)
@@ -28,4 +27,10 @@
     - [高级-12购物车（ThreadLocal、RedirectAttribute）](gulimall/senior/高级-12购物车（ThreadLocal、RedirectAttribute）.md)
     - [高级-13消息队列RabbitMQ](gulimall/senior/高级-13消息队列RabbitMQ.md)
     - [高级-14订单服务（幂等、Feign丢失）](gulimall/senior/高级-14订单服务（幂等、Feign丢失）.md)
+    - [高级-15分布式事务（RabbitMQ死信路由）](gulimall/senior/高级-15分布式事务（RabbitMQ死信路由）.md)
+    - [高级-16支付（支付宝、加密、内网穿透）](gulimall/senior/高级-16支付（支付宝、加密、内网穿透）.md)
+    - [高级-17秒杀（定时、信号量）](gulimall/senior/高级-17秒杀（定时、信号量）.md)
+    - [高级-18Sentinel和Sleuth链路追踪](gulimall/senior/高级-18Sentinel和Sleuth链路追踪.md)
 
+- [分布式-集群](gulimall/cluster/集群-01k8s.md)
+  - [集群-01k8s](gulimall/cluster/集群-01k8s.md)
